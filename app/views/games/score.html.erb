@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Result</h1>
+<%  if @result == 2 %>
+  <p><b>Congratulations! </b><%= @word %> is a valid English word!</p>
+<%  elsif @result == 1 %>
+ <p>Sorry but <b><%= @word %></b> can't be built out of <%=@letters %></p>
+ <%  else %>
+ <p>Sorry but <b><%= @word %></b> does not seem to be a valid English word... </p>
+<% end %>
+
+<%=  link_to "Play again", new_path %>
+</div>
